@@ -1,0 +1,24 @@
+{
+  "latex-workshop.latex.autoBuild.run": "onSave",
+  "latex-workshop.view.pdf.viewer": "tab",
+  "latex-workshop.latex.outDir": "%DIR%/output",
+  "latex-workshop.latex.recipes": [
+    {
+      "name": "xelatex → output",
+      "tools": ["xelatex-output"]
+    }
+  ],
+  "latex-workshop.latex.tools": [
+    {
+      "name": "xelatex-output",
+      "command": "xelatex",
+      "args": [
+        "-interaction=nonstopmode",
+        "-synctex=1",
+        "-output-directory=%DIR%/output",
+        "%DOC%"
+      ]
+    }
+  ],
+  "latex-workshop.latex.recipe.default": "xelatex → output"
+}
